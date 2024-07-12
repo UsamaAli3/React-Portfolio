@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <Navebar />
-      <Home />
+      <Home backgroundColor={'white'} />
     </>
   );
 }
