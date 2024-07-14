@@ -1,14 +1,14 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/Home";
 import Navebar from "./pages/Navebar";
 
 function App() {
   return (
     <>
-      <Navebar />
-      <Home backgroundColor={'white'} />
+      <div className="bg-skin-color" data-theme="dark">
+        <Navebar />
+        <Outlet />
+      </div>
     </>
   );
 }
