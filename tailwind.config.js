@@ -15,9 +15,17 @@ export default {
         skin: {
           color: "var(--bg-text)",
         },
-        hover:{
-          color:"var(--text-primary-color)"
-        }
+        hover: {
+          color: "var(--text-primary-color)",
+        },
+        textColor: {
+          color: "var(--text-color)",
+        },
+      },
+      borderColor: {
+        skin: {
+          color: "var(--border-color)",
+        },
       },
     },
   },

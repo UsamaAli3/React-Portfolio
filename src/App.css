@@ -2,18 +2,21 @@
   --bg-color: #fdbb2e;
   --hover-color: #212529;
   --text-color: #212529;
-  --text-primary-color: #dc9d13;
+  --text-primary-color: #fdbb2e;
+  --border-color: #fdbb2e;
 }
 [data-theme="green"] {
   --bg-color: #588a03;
   --text-color: #212529;
   --hover-color: #212529;
-  --text-primary-color: #99c945;
+  --text-primary-color: #588a03;
+  --border-color: #588a03;
 }
 
 [data-theme="dark"] {
   --bg-color: #383935;
   --text-color: #212529;
   --hover-color: #212529;
-  --text-primary-color: #6b705b;
+  --text-primary-color: #383935;
+  --border-color: #383935;
 }

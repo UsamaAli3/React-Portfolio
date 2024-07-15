@@ -10,21 +10,24 @@ import Resume from "./pages/Resume.jsx";
 import ClientSpeak from "./pages/ClientSpeak.jsx";
 import Profile from "./pages/Profile.jsx";
 import ContectMe from "./pages/ContectMe.jsx";
+import store from "./store/store";
+import { Provider } from "react-redux";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route index element={<Home />} />
-          <Route path="/about-me" element={<AboutMe />} />
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/about-me" Component={<AboutMe />} />
           <Route path="/what-i-do" element={<WhatIDo />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/client-speak" element={<ClientSpeak />} />
           <Route path="/contect-me" element={<ContectMe />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );

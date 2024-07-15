@@ -1,11 +1,18 @@
-import React from "react";
-import { IoArrowDownCircleOutline, IoSettings } from "react-icons/io5";
-import { IoMdArrowRoundDown } from "react-icons/io";
+import React, { useState } from "react";
+import { IoArrowDownCircleOutline } from "react-icons/io5";
+import { IoMdArrowRoundDown, IoMdSettings } from "react-icons/io";
 import Typewriter from "typewriter-effect";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
+
 import ColorSetting from "../container/ColorSetting";
 
 function Home() {
+  const [isActive, setIsActive] = useState(false);
+
+  const handleToggle = () => {
+    setIsActive(!isActive);
+  };
+
   return (
     <>
       <div className="flex flex-col-reverse md:flex-row leading-10 p-auto m-auto w-full h-full justify-center items-center md:h-[75vh] md:w-[85%] pt-28 pb-0 text-skin-color">
@@ -27,15 +34,18 @@ function Home() {
             <button className=" shadow-2xl w-44  mr-8 bg-black text-white hover:bg-hover-color">
               View My Work
             </button>
-            <a
+            <Link
               className="underline hover:no-underline flex justify-center items-center"
-              href=""
+              to="contect-me"
+              spy={true}
+              smooth={true}
+              duration={500}
             >
               Contect me{" "}
               <span className="ml-2">
                 <IoArrowDownCircleOutline />
               </span>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -44,19 +54,26 @@ function Home() {
         </div>
       </div>
       <Link
-        className="flex justify-center items-center text-xl  md:mt-16 "
-        to=""
+        className="flex justify-center items-center text-xl cursor-pointer  md:mt-16 "
+        to="about-me"
+        spy={true}
+        smooth={true}
+        duration={500}
       >
         <IoMdArrowRoundDown className="z-10 h-16 animate-[bounce_1s_ease-in-out_infinite]" />
       </Link>
-      <div className="flex justify-end fixed top-[40vh] right-0 z-40">
-        <Link
+
+      {/*Color Switcher*/}
+
+      <div className="flex justify-end fixed top-[40vh] right-0 z-20">
+        <button
           to=""
           className="bg-gray-700 flex justify-center items-center rounded-l-lg h-8 w-8"
+          onClick={handleToggle}
         >
-          <IoSettings />
-        </Link>
-        <ColorSetting className={"hidde"} />
+          <IoMdSettings className="text-white text-xl" />
+        </button>
+        <ColorSetting className={isActive ? "block" : "hidden"} />
       </div>
     </>
   );
