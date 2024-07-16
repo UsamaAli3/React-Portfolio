@@ -5,13 +5,18 @@ import AboutMe from "./pages/AboutMe";
 import Home from "./pages/Home";
 import { Element } from "react-scroll";
 import WhatIDo from "./pages/WhatIDo";
+import Resume from "./pages/Resume";
+import Profile from "./pages/Profile";
+import ClientSpeak from "./pages/ClientSpeak";
+import ContectMe from "./pages/ContectMe";
+import Footer from "./pages/Footer";
 
 function App() {
   const color = useSelector((state) => state.color.color);
   console.log(color);
   return (
     <>
-      <div className="bg-skin-color" data-theme={color}>
+      <div className="bg-skin-color w-full" data-theme={color}>
         <Navebar />
         <Element name="home" className="element">
           <Home />
@@ -22,18 +27,19 @@ function App() {
         <Element name="what-i-do" className="element">
           <WhatIDo />
         </Element>
-        {/* <Element name="resume" className="element">
-          <AboutMe />
+        <Element name="resume" className="element">
+          <Resume />
         </Element>
         <Element name="profile" className="element">
-          <AboutMe />
+          <Profile />
         </Element>
         <Element name="client-speak" className="element">
-          <AboutMe />
+          <ClientSpeak />
         </Element>
         <Element name="contect-me" className="element">
-          <AboutMe />
-        </Element> */}
+          <ContectMe />
+        </Element> 
+        <Footer />
       </div>
     </>
   );

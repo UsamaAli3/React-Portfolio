@@ -10,6 +10,9 @@ export default {
         hover: {
           color: "var(--hover-color)",
         },
+        primary: {
+          color: "var(--bg-primary-color)",
+        },
       },
       textColor: {
         skin: {
