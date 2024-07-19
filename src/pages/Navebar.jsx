@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { FaPhone } from "react-icons/fa";
 import Hamburger from "hamburger-react";
 import Menu from "../container/Menu";
+import { Link } from "react-scroll";
 
 function Navebar() {
   const [isActive, setIsActive] = useState(false);
@@ -24,13 +25,13 @@ function Navebar() {
       <nav
         className={`flex justify-between items-center px-5 md:px-[4.9rem] h-[8.72] w-full fixed z-20 text-skin-color ${textColorClass}`}
       >
-        <h1 className="text-3xl font-medium ">USAMA</h1>
+        <Link to="home" smooth className="text-3xl font-medium cursor-pointer ">USAMA</Link>
         <div className="flex w-60 justify-between items-center">
           <p className="flex justify-center items-baseline">
             <span className="mr-2 ">
               <FaPhone />
             </span>
-            +923407955214
+            +923187411532
           </p>
 
           <button className=" text-skin-color z-30 " onClick={handleToggle}>

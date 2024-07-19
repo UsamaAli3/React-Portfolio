@@ -12,7 +12,7 @@ function SkillProgressBar() {
               <p>HTML/CSS</p>
               <p>95%</p>
             </div>
-            <div className="bg-gray-400 w-full h-2 flex rounded-full  items-center">
+            <div className="bg-[#E9ECEF] w-full h-2 flex rounded-full  items-center">
               <div className="bg-skin-color w-[95%] h-2 rounded-full"></div>
             </div>
           </div>
@@ -21,7 +21,7 @@ function SkillProgressBar() {
               <p>JAVASCRIPT</p>
               <p>80%</p>
             </div>
-            <div className="bg-gray-400 w-full h-2 flex rounded-full  items-center">
+            <div className="bg-[#E9ECEF] w-full h-2 flex rounded-full  items-center">
               <div className="bg-skin-color w-[80%] h-2 rounded-full"></div>
             </div>
           </div>
@@ -30,7 +30,7 @@ function SkillProgressBar() {
               <p>Reactjs</p>
               <p>80%</p>
             </div>
-            <div className="bg-gray-400 w-full h-2 flex rounded-full  items-center">
+            <div className="bg-[#E9ECEF] w-full h-2 flex rounded-full  items-center">
               <div className="bg-skin-color w-[80%] h-2 rounded-full"></div>
             </div>
           </div>
@@ -39,7 +39,7 @@ function SkillProgressBar() {
               <p>Tailwind CSS</p>
               <p>90%</p>
             </div>
-            <div className="bg-gray-400 w-full h-2 flex rounded-full  items-center">
+            <div className="bg-[#E9ECEF] w-full h-2 flex rounded-full  items-center">
               <div className="bg-skin-color w-[90%] h-2 rounded-full"></div>
             </div>
           </div>
@@ -48,7 +48,7 @@ function SkillProgressBar() {
               <p>Node js/Express js</p>
               <p>50%</p>
             </div>
-            <div className="bg-gray-400 w-full h-2 flex rounded-full  items-center">
+            <div className="bg-[#E9ECEF] w-full h-2 flex rounded-full  items-center">
               <div className="bg-skin-color w-[50%] h-2 rounded-full"></div>
             </div>
           </div>
@@ -57,7 +57,7 @@ function SkillProgressBar() {
               <p>Mongo DB</p>
               <p>65%</p>
             </div>
-            <div className="bg-gray-400 w-full h-2 flex rounded-full  items-center">
+            <div className="bg-[#E9ECEF] w-full h-2 flex rounded-full  items-center">
               <div className="bg-skin-color w-[65%] h-2 rounded-full"></div>
             </div>
           </div>

@@ -4,12 +4,11 @@ import SkillProgressBar from "../container/SkillProgressBar";
 function Resume() {
   return (
     <>
-      <section className="flex flex-col  justify-center items-center  text-textColor-color  h-full pt-16  bg-[#F8F9FA]  px-14 ">
+      <section className="flex flex-col  justify-center items-center  text-textColor-color  h-full pt-16  bg-white  px-14 ">
         <p className="mb-2">
-          <span className="bg-skin-color text-base px-2">What I Do?</span>
+          <span className="bg-skin-color text-base px-2">Resume</span>
         </p>
-        <h2 className="text-3xl mb-14 font-semibold">
-          How I can help your next project
+        <h2 className="text-3xl mb-14 font-semibold">A summary of My Resume
         </h2>
         <div className="flex flex-col md:flex-row">
           <div className=" grow flex-col md:mx-10 md:flex text-start md:text-start ">

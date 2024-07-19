@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,46 +8,50 @@ function ClientSpeak() {
     dots: true,
     infinite: true,
     autoplay: true,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     nextarrow: <div>|||</div>,
     prevarrow: <div>|||</div>,
   };
   return (
     <>
-      <section className="flex flex-col  justify-center items-center  text-textColor-color h-full pt-16 bg-[#F8F9FA]  px-16 ">
+      <section className="flex flex-col  justify-center items-center bg-[#939597] h-full pt-16 bg-skin-color  px-16 ">
         <p className="mb-2">
-          <span className="bg-skin-color text-base px-2">Client Speak</span>
+          <span className="bg-skin-color text-base px-2  text-textColor-color">
+            Client Speak
+          </span>
         </p>
-        <h2 className="text-3xl mb-14 font-semibold">
+        <h2 className="text-3xl mb-14 font-semibold text-white">
           What Some of my Clients Say
         </h2>
-      </section>
-      {/* frtgfg */}
-      
-        <div className="slider-container m-auto p-auto">
+        {/* frtgfg */}
+        <div className="slider-container m-auto p-auto h-full text-white w-full md:w-[50%]  mb-28">
           <Slider {...settings}>
-            <div>
-              <h3>1</h3>
+            <div className="flex flex-col justify-center items-center h-full  text-center ">
+              <p className="text-xl mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Possimus similique mollitia recusandae pariatur magnam! Quod
+                facere excepturi id, animi minima facilis magni illum nisi
+                ratione nihil saepe eligendi rerum accusantium?
+              </p>
+              <div className="shadow-2xl  w-16 h-16 m-auto p-auto rounded-full  bg-no-repeat bg-cover bg-center bg-[url('https://portfolio-project-ochre.vercel.app/projects-img/web%20profile%20(2).jpg')] "></div>
+              <p className="text-4 font-semibold mt-4 ">USAMA ALI</p>
+              <p className="text-4  "> Freelance from USA</p>
             </div>
-            <div>
-              <h3>2</h3>
-            </div>
-            <div>
-              <h3>3</h3>
-            </div>
-            <div>
-              <h3>4</h3>
-            </div>
-            <div>
-              <h3>5</h3>
-            </div>
-            <div>
-              <h3>6</h3>
+            <div className="flex flex-col justify-center items-center h-full  text-center ">
+              <p className="text-xl mb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Possimus similique mollitia recusandae pariatur magnam! Quod
+                facere excepturi id, animi minima facilis magni illum nisi
+                ratione nihil saepe eligendi rerum accusantium?
+              </p>
+              <div className="shadow-2xl  w-16 h-16 m-auto p-auto rounded-full  bg-no-repeat bg-cover bg-center bg-[url('https://portfolio-project-ochre.vercel.app/projects-img/web%20profile%20(2).jpg')] "></div>
+              <p className="text-4 font-semibold mt-4 ">USAMA ALI</p>
+              <p className="text-4  "> Freelance from USA</p>
             </div>
           </Slider>
         </div>
-       
+      </section>
     </>
   );
 }

@@ -3,12 +3,14 @@ import React from "react";
 function AboutMe() {
   return (
     <>
-      <section className="flex flex-col  justify-center items-center  text-textColor-color  h-full pt-16 bg-white  px-16 pb-8">
+      <section className="flex flex-col  justify-center items-center  text-textColor-color  h-full pt-16 bg-white  px-16 pb-8 selection:bg-skin-color ">
         <p className="mb-2">
-          <span className="bg-skin-color text-base px-2">About Me</span>
+          <span className="bg-skin-color text-base px-2 text-textColor-color">
+            About Me
+          </span>
         </p>
         <h2 className="text-3xl mb-14 font-semibold">Know Me More</h2>
-        <div>
+        <div className=" text-textColor-color">
           <div className=" grow md:flex text-center md:text-start ">
             <div className="">
               <h1 className="text-3xl mb-4">
@@ -40,21 +42,25 @@ function AboutMe() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 w-full   ">
           <div>
             <h6 className="text-[#8E9A9D]">Name:</h6>
-            <p className="font-semibold">Usama Ali</p>
+            <p className="font-semibold text-textColor-color">Usama Ali</p>
           </div>
-          <div >
+          <div>
             <h6 className="text-[#8E9A9D]">Email:</h6>
-            <p className="underline hover:no-underline font-semibold md:flex  ">
+            <p className="underline hover:no-underline font-semibold md:flex  text-textColor-color ">
               imusamaali7 <span> @gmail.com</span>
             </p>
           </div>
           <div>
             <h6 className="text-[#8E9A9D]">Date of Birth:</h6>
-            <p className="font-semibold">25 August, 1998</p>
+            <p className="font-semibold text-textColor-color">
+              25 August, 1998
+            </p>
           </div>
           <div>
             <h6 className="text-[#8E9A9D]">From:</h6>
-            <p className="font-semibold">Lahore, Pakistan.</p>
+            <p className="font-semibold text-textColor-color">
+              Lahore, Pakistan.
+            </p>
           </div>
         </div>
       </section>

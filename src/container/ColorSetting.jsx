@@ -19,14 +19,50 @@ function ColorSetting({ className }) {
         >
           <li>
             <button
-              className="w-8 h-8 rounded-full cursor-pointer bg-green-500 "
+              className="w-8 h-8 rounded-full cursor-pointer focus:scale-75 bg-[#00FFFF] "
+              onClick={() => dispatch(color("blue"))}
+            ></button>
+          </li>
+          <li>
+            <button
+              className="w-8 h-8 rounded-full cursor-pointer focus:scale-75 bg-[#00FE9C] "
+              onClick={() => dispatch(color("light-blue"))}
+            ></button>
+          </li>
+          <li>
+            <button
+              className="w-8 h-8 rounded-full cursor-pointer focus:scale-75 bg-[#ADFF2F] "
               onClick={() => dispatch(color("green"))}
             ></button>
           </li>
           <li>
             <button
-              className="w-8 h-8 rounded-full cursor-pointer bg-gray-500 "
-              onClick={() => dispatch(color("dark"))}
+              className="w-8 h-8 rounded-full cursor-pointer focus:scale-75 bg-[#D6AD17] "
+              onClick={() => dispatch(color("yellow"))}
+            ></button>
+          </li>
+          <li>
+            <button
+              className="w-8 h-8 rounded-full cursor-pointer focus:scale-75 bg-[#FF91FB] "
+              onClick={() => dispatch(color("pink"))}
+            ></button>
+          </li>
+          <li>
+            <button
+              className="w-8 h-8 rounded-full cursor-pointer focus:scale-75 bg-[#FDBB2E] "
+              onClick={() => dispatch(color("orignal"))}
+            ></button>
+          </li>
+          <li>
+            <button
+              className="w-8 h-8 rounded-full cursor-pointer focus:scale-75 bg-[#EEE8AA] "
+              onClick={() => dispatch(color("light-pink"))}
+            ></button>
+          </li>
+          <li>
+            <button
+              className="w-8 h-8 rounded-full cursor-pointer focus:scale-75 bg-[#F5DF4E] "
+              onClick={() => dispatch(color("light-yellow"))}
             ></button>
           </li>
 
