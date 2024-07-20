@@ -6,11 +6,18 @@ import {
   FaLinkedinIn,
   FaGithub,
 } from "react-icons/fa6";
+import { motion } from "framer-motion";
 function ContectMe() {
   return (
     <>
-      <section className="flex flex-col md:flex-row px-24 gap-x-28 text-textColor-color text-center md:text-start  pt-[4rem]  ">
-        <div className="grow ">
+      <section className="flex flex-col md:flex-row px-8 md:px-24 gap-x-28 text-textColor-color size-full md:text-start  pt-[4rem]  ">
+        <motion.div
+          className="grow "
+          initial={{ y: 90, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h1 className="text-wrap md:text-nowrap text-4xl  mb-12 font-semibold">
             Let's get in touch
           </h1>
@@ -73,8 +80,15 @@ function ContectMe() {
               </li>
             </ul>
           </div>
-        </div>
-        <div className="grow text-textColor-color w-full ">
+        </motion.div>
+
+        <motion.div
+          className="grow text-textColor-color w-full pt-16 md:pt-0"
+          initial={{ y: 90, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 1.5, duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <h1 className=" text-4xl text-wrap md:text-nowrap  mb-12 font-semibold">
             Estimate your Project?
           </h1>
@@ -104,11 +118,19 @@ function ContectMe() {
               className="bg-transparent border-b-2  border-[#ced4da] outline-none h-48 mb-2"
             />
           </div>
-          <button className="flex justify-center items-center  shadow-2xl w-40  my-8 px-4 py-4 bg-hover-color hover:bg-[#363738] text-white">
-            <span className="mr-4">Send</span>
-            <FaArrowRight />
-          </button>
-        </div>
+          <motion.div
+            className="flex md:justify-start justify-center"
+            initial={{ y: 90, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <button className="flex justify-center items-center  shadow-2xl w-40  my-8 px-4 py-4 bg-hover-color hover:bg-[#363738] text-white">
+              <span className="mr-4">Send</span>
+              <FaArrowRight />
+            </button>
+          </motion.div>
+        </motion.div>
       </section>
     </>
   );

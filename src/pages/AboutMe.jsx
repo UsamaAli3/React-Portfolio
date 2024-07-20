@@ -1,18 +1,53 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { motion } from "framer-motion";
 
 function AboutMe() {
+  //const ref = useRef(null);
+  //const isInView = useInView(ref);
+
+  // const animations = {
+  //   hidden: { opacity: 1 },
+  //   visible: {
+  //     opacity: 1,
+  //     transition: {
+  //       delayChildren: 0.3,
+  //       staggerChildren: 0.2,
+  //     },
+  //   },
+  // }
+
   return (
     <>
-      <section className="flex flex-col  justify-center items-center  text-textColor-color  h-full pt-16 bg-white  px-16 pb-8 selection:bg-skin-color ">
-        <p className="mb-2">
+      <motion.section className="flex flex-col  justify-center items-center  text-textColor-color  h-lvh pt-16 bg-white  px-16 pb-8 selection:bg-skin-color ">
+        <motion.p
+          className="mb-2"
+          initial={{ y: 10, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           <span className="bg-skin-color text-base px-2 text-textColor-color">
             About Me
           </span>
-        </p>
-        <h2 className="text-3xl mb-14 font-semibold">Know Me More</h2>
-        <div className=" text-textColor-color">
+        </motion.p>
+        <motion.h2
+          className="text-3xl mb-14 font-semibold"
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          viewport={{ once: true }}
+        >
+          Know Me More
+        </motion.h2>
+        <div className=" text-textColor-color mb-16">
           <div className=" grow md:flex text-center md:text-start ">
-            <div className="">
+            <motion.div
+              className=""
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              viewport={{ once: true }}
+            >
               <h1 className="text-3xl mb-4">
                 Hi, I'm{" "}
                 <span className="font-bold border-b-4 border-skin-color">
@@ -26,44 +61,92 @@ function AboutMe() {
                 including HTML5, JavaScript, CSS, React JS. Strong background in
                 project management and customer relations .
               </p>
-            </div>
-            <div className="grow my-8">
-              <div className="w-24 h-24 rounded-full bg-skin-color mb-4 relative m-auto p-auto ">
-                <span className="absolute text-[100px] top-[-30px] right-[20px] md:top-[-55px] md:left-2  md:text-[140px]  ">
+            </motion.div>
+            <motion.div
+              className="grow my-8"
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ delay: 1, duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <motion.div className="w-24 h-24 rounded-full bg-skin-color mb-4 relative m-auto p-auto ">
+                <motion.span
+                  className="absolute text-[100px] top-[-30px] right-[20px] md:top-[-55px] md:left-2  md:text-[140px]  "
+                  initial={{ scale: 1.2 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 300,
+                    repeat: 1,
+                    delay: 1.5,
+                    duration: 1,
+                  }}
+                >
                   2
-                </span>
-              </div>
-              <div className="text-2xl text-nowrap">
+                </motion.span>
+              </motion.div>
+              <motion.div
+                className="text-2xl text-nowrap"
+                initial={{ scale: 0.8 }}
+                whileInView={{ scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  delay: 2.5,
+                  duration: 2.5,
+                }}
+                viewport={{ once: true }}
+              >
                 Years of <span className="font-semibold">Experiance</span>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 w-full   ">
-          <div>
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1, duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <h6 className="text-[#8E9A9D]">Name:</h6>
             <p className="font-semibold text-textColor-color">Usama Ali</p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1, duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <h6 className="text-[#8E9A9D]">Email:</h6>
             <p className="underline hover:no-underline font-semibold md:flex  text-textColor-color ">
               imusamaali7 <span> @gmail.com</span>
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1, duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <h6 className="text-[#8E9A9D]">Date of Birth:</h6>
             <p className="font-semibold text-textColor-color">
               25 August, 1998
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 1, duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <h6 className="text-[#8E9A9D]">From:</h6>
             <p className="font-semibold text-textColor-color">
               Lahore, Pakistan.
             </p>
-          </div>
+          </motion.div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }

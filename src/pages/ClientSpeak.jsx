@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { motion } from "framer-motion";
 
 function ClientSpeak() {
   const settings = {
@@ -15,7 +16,13 @@ function ClientSpeak() {
   };
   return (
     <>
-      <section className="flex flex-col  justify-center items-center bg-[#939597] h-full pt-16 bg-skin-color  px-16 ">
+      <motion.section
+        className="flex flex-col  justify-center items-center bg-[#939597] h-full pt-16 bg-skin-color  px-16 "
+        initial={{ opacity: 0, scale: 1.2 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        viewport={{ once: true }}
+      >
         <p className="mb-2">
           <span className="bg-skin-color text-base px-2  text-textColor-color">
             Client Speak
@@ -51,7 +58,7 @@ function ClientSpeak() {
             </div>
           </Slider>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 }

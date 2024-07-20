@@ -4,20 +4,38 @@ import { FiMonitor } from "react-icons/fi";
 import { FaPenRuler } from "react-icons/fa6";
 import { FaPaintBrush } from "react-icons/fa";
 import { TbSpeakerphone } from "react-icons/tb";
+import { motion } from "framer-motion";
 
 function WhatIDo() {
   return (
     <>
       <section className="flex flex-col  justify-center items-center  text-textColor-color h-full pt-16 bg-[#F8F9FA]  px-16 ">
-        <p className="mb-2">
+        <motion.p
+          className="mb-2"
+          initial={{ y: 10, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.8, duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           <span className="bg-skin-color text-base px-2">What I Do?</span>
-        </p>
-        <h2 className="text-3xl mb-14 font-semibold">
+        </motion.p>
+        <motion.h2
+          className="text-3xl mb-14 font-semibold"
+          initial={{ y: 10, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 1, duration: 0.5 }}
+          viewport={{ once: true }}
+        >
           How I can help your next project
-        </h2>
+        </motion.h2>
 
         <div className="grid grid-cols-1 place-content-center sm:grid-cols-2 md:grid-cols-3 gap-11 text-center w-full   ">
-          <div>
+          <motion.div
+            initial={{ y: 80 }}
+            whileInView={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <div className="flex justify-center text-5xl text-hover-color mb-4">
               <IoMdColorPalette />
             </div>
@@ -28,8 +46,13 @@ function WhatIDo() {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry’s standard dummy text.
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ y: 80 }}
+            whileInView={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <div className="flex justify-center text-5xl text-hover-color mb-4">
               <FiMonitor />
             </div>
@@ -40,8 +63,13 @@ function WhatIDo() {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry’s standard dummy text.
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ y: 80 }}
+            whileInView={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <div className="flex justify-center text-5xl text-hover-color mb-4">
               <FaPenRuler />
             </div>
@@ -52,8 +80,13 @@ function WhatIDo() {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry’s standard dummy text.
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ y: 80 }}
+            whileInView={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <div className="flex justify-center text-5xl text-hover-color mb-4">
               <FaPaintBrush />
             </div>
@@ -64,8 +97,13 @@ function WhatIDo() {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry’s standard dummy text.
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ y: 80 }}
+            whileInView={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <div className="flex justify-center text-5xl text-hover-color mb-4">
               <IoMdAnalytics />
             </div>
@@ -76,8 +114,13 @@ function WhatIDo() {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry’s standard dummy text.
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ y: 80 }}
+            whileInView={{ y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <div className="flex justify-center text-5xl text-hover-color mb-4">
               <TbSpeakerphone />
             </div>
@@ -88,7 +131,7 @@ function WhatIDo() {
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry’s standard dummy text.
             </p>
-          </div>
+          </motion.div>
         </div>
       </section>
     </>
