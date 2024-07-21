@@ -8,11 +8,11 @@ import {
 } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
-function Menu({ className }) {
+function Menu({ className, handel }) {
   return (
     <>
       <div className={`absolute top-0 left-0  ${className} `}>
-        <ul className="flex flex-col w-[100%] h-[100vh] leading-relaxed text-2xl text-white bg-black fixed z-20 justify-center items-center bg-opacity-65">
+        <ul className="flex flex-col w-[100%] h-[100vh] leading-relaxed text-2xl text-white bg-black fixed z-20 justify-center items-center bg-opacity-90">
           <li className="text-hover-color focus:text-hover-color hover:text-hover-color cursor-pointer">
             <Link
               to="home"
@@ -20,6 +20,7 @@ function Menu({ className }) {
               smooth={true}
               duration={500}
               activeClass="text-hover-color"
+              onClick={handel}
             >
               {" "}
               Home
@@ -32,6 +33,7 @@ function Menu({ className }) {
               smooth={true}
               activeClass="text-hover-color"
               duration={500}
+              onClick={handel}
               className=" focus:text-hover-color hover:text-hover-color cursor-pointer"
             >
               {" "}
@@ -44,6 +46,7 @@ function Menu({ className }) {
               spy={true}
               smooth={true}
               duration={500}
+              onClick={handel}
               activeClass="text-hover-color"
               className="cursor-pointer hover:text-hover-color"
             >
@@ -57,6 +60,7 @@ function Menu({ className }) {
               spy={true}
               smooth={true}
               duration={500}
+              onClick={handel}
               activeClass="text-hover-color"
               className="cursor-pointer hover:text-hover-color"
             >
@@ -71,6 +75,7 @@ function Menu({ className }) {
               spy={true}
               smooth={true}
               duration={500}
+              onClick={handel}
               className="cursor-pointer hover:text-hover-color"
             >
               {" "}
@@ -84,6 +89,7 @@ function Menu({ className }) {
               spy={true}
               smooth={true}
               duration={500}
+              onClick={handel}
               className="cursor-pointer hover:text-hover-color"
             >
               {" "}
@@ -97,6 +103,7 @@ function Menu({ className }) {
               spy={true}
               smooth={true}
               duration={500}
+              onClick={handel}
               className="cursor-pointer hover:text-hover-color"
             >
               {" "}
@@ -144,7 +151,7 @@ function Menu({ className }) {
               <li className="hover:text-black hover:scale-110">
                 <div className="tooltip" data-tip="Github">
                   <a
-                    href="https://github.com/UsamaAli3"
+                    href="https://github.com/"
                     target="_blank"
                     data-tooltip-target="tooltip-default"
                   >

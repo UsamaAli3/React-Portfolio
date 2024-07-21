@@ -9,21 +9,21 @@ import { motion } from "framer-motion";
 function WhatIDo() {
   return (
     <>
-      <section className="flex flex-col  justify-center items-center  text-textColor-color h-full pt-16 bg-[#F8F9FA]  px-16 ">
+      <section className="flex flex-col  justify-center items-center  text-textColor-color h-full pt-16 bg-[#F8F9FA] px-16  ">
         <motion.p
           className="mb-2"
-          initial={{ y: 10, opacity: 0 }}
+          initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
           viewport={{ once: true }}
         >
           <span className="bg-skin-color text-base px-2">What I Do?</span>
         </motion.p>
         <motion.h2
-          className="text-3xl mb-14 font-semibold"
-          initial={{ y: 10, opacity: 0 }}
+          className="text-3xl mb-14 font-semibold text-center"
+          initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
           viewport={{ once: true }}
         >
           How I can help your next project

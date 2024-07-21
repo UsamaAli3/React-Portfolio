@@ -2,26 +2,12 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 function AboutMe() {
-  //const ref = useRef(null);
-  //const isInView = useInView(ref);
-
-  // const animations = {
-  //   hidden: { opacity: 1 },
-  //   visible: {
-  //     opacity: 1,
-  //     transition: {
-  //       delayChildren: 0.3,
-  //       staggerChildren: 0.2,
-  //     },
-  //   },
-  // }
-
   return (
     <>
-      <motion.section className="flex flex-col  justify-center items-center  text-textColor-color  h-lvh pt-16 bg-white  px-16 pb-8 selection:bg-skin-color ">
+      <motion.section className="flex flex-col  justify-center items-center  text-textColor-color  pt-16 bg-white px-8 md:px-16 pb-8 selection:bg-skin-color md:h-lvh ">
         <motion.p
           className="mb-2"
-          initial={{ y: 10, opacity: 0 }}
+          initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
           viewport={{ once: true }}
@@ -32,9 +18,9 @@ function AboutMe() {
         </motion.p>
         <motion.h2
           className="text-3xl mb-14 font-semibold"
-          initial={{ y: 30, opacity: 0 }}
+          initial={{ y: 50, opacity: 0.5 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
           viewport={{ once: true }}
         >
           Know Me More
@@ -42,19 +28,18 @@ function AboutMe() {
         <div className=" text-textColor-color mb-16">
           <div className=" grow md:flex text-center md:text-start ">
             <motion.div
-              className=""
-              initial={{ y: 30, opacity: 0 }}
+              initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.5 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <h1 className="text-3xl mb-4">
-                Hi, I'm{" "}
-                <span className="font-bold border-b-4 border-skin-color">
-                  Usama Ali
+              <h1 className="text-3xl mb-4 ">
+                Hi, I'm 
+                <span className="font-bold border-b-4 border-skin-color ml-2">
+                   Usama Ali
                 </span>
               </h1>
-              <p className="w-[90%] text-base mb-4 leading-loose">
+              <p className="w-[90%] text-base mb-4 leading-loose pl-6 md:pl-0">
                 I'm a Web Developer specializing in front end development.
                 Experienced with all stages of the development cycle for dynamic
                 web projects. Well-versed in numerous programming languages
@@ -64,7 +49,7 @@ function AboutMe() {
             </motion.div>
             <motion.div
               className="grow my-8"
-              initial={{ y: 30, opacity: 0 }}
+              initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ delay: 1, duration: 0.5 }}
               viewport={{ once: true }}
@@ -72,15 +57,16 @@ function AboutMe() {
               <motion.div className="w-24 h-24 rounded-full bg-skin-color mb-4 relative m-auto p-auto ">
                 <motion.span
                   className="absolute text-[100px] top-[-30px] right-[20px] md:top-[-55px] md:left-2  md:text-[140px]  "
-                  initial={{ scale: 1.2 }}
+                  initial={{ scale: 1.3 }}
                   whileInView={{ scale: 1 }}
                   transition={{
                     type: "spring",
                     stiffness: 300,
-                    repeat: 1,
-                    delay: 1.5,
+
+                    delay: 2,
                     duration: 1,
                   }}
+                  viewport={{once:true}}
                 >
                   2
                 </motion.span>
@@ -104,18 +90,18 @@ function AboutMe() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 w-full   ">
           <motion.div
-            initial={{ y: 30, opacity: 0 }}
+            initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
+            transition={{ delay: 0, duration: 0.5 }}
             viewport={{ once: true }}
           >
             <h6 className="text-[#8E9A9D]">Name:</h6>
             <p className="font-semibold text-textColor-color">Usama Ali</p>
           </motion.div>
           <motion.div
-            initial={{ y: 30, opacity: 0 }}
+            initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
             viewport={{ once: true }}
           >
             <h6 className="text-[#8E9A9D]">Email:</h6>
@@ -124,9 +110,9 @@ function AboutMe() {
             </p>
           </motion.div>
           <motion.div
-            initial={{ y: 30, opacity: 0 }}
+            initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
             viewport={{ once: true }}
           >
             <h6 className="text-[#8E9A9D]">Date of Birth:</h6>
@@ -135,9 +121,9 @@ function AboutMe() {
             </p>
           </motion.div>
           <motion.div
-            initial={{ y: 30, opacity: 0 }}
+            initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1, duration: 0.5 }}
+            transition={{ delay: 0.7, duration: 0.5 }}
             viewport={{ once: true }}
           >
             <h6 className="text-[#8E9A9D]">From:</h6>

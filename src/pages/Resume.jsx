@@ -8,18 +8,18 @@ function Resume() {
       <section className="flex flex-col  justify-center items-center  text-textColor-color  h-full pt-16  bg-white  px-14 ">
         <motion.p
           className="mb-2"
-          initial={{ y: 10, opacity: 0 }}
+          initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
           viewport={{ once: true }}
         >
           <span className="bg-skin-color text-base px-2">Resume</span>
         </motion.p>
         <motion.h2
           className="text-3xl mb-14 font-semibold text-center"
-          initial={{ y: 30, opacity: 0 }}
+          initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
           viewport={{ once: true }}
         >
           A summary of My Resume
@@ -27,10 +27,10 @@ function Resume() {
         <div className="flex flex-col md:flex-row">
           <motion.div
             className=" grow flex-col md:mx-10 md:flex text-start md:text-start "
-            initial={{ y: 90, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
+          viewport={{ once: true }}
           >
             {/* Education Section */}
 
@@ -69,10 +69,10 @@ function Resume() {
           {/* Experience Section */}
           <motion.div
             className=" grow flex-col md:mx-10 md:flex text-start md:text-start pt-16 md:pt-0 "
-            initial={{ y: 90, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 1.5, duration: 0.6 }}
-            viewport={{ once: true }}
+            initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          viewport={{ once: true }}
           >
             <h1 className="text-[28px] mb-4 font-semibold">My Experiance</h1>
             <div className=" border-l-2 border-skin-color  pl-4">

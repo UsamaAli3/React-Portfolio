@@ -17,7 +17,10 @@ function App() {
 
   return (
     <>
-      <div className="bg-skin-color w-full" data-theme={color}>
+      <div
+        className=" w-full selection:bg-skin-color selection:text-white"
+        data-theme={color}
+      >
         <Navebar />
         <Element name="home" className="element">
           <Home />

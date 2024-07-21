@@ -7,8 +7,8 @@ function SkillProgressBar() {
       <div className="w-full text-start  pt-16 bg-white">
         <motion.h1
           className="text-[28px] mb-4 font-semibold "
-          initial={{ y: 50 }}
-          whileInView={{ y: 0 }}
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.5 }}
           viewport={{ once: true }}
         >
@@ -17,8 +17,8 @@ function SkillProgressBar() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-11 ">
           <motion.div
-            initial={{ y: 50 }}
-            whileInView={{ y: 0 }}
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
             viewport={{ once: true }}
           >
@@ -31,8 +31,8 @@ function SkillProgressBar() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ y: 50 }}
-            whileInView={{ y: 0 }}
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
             viewport={{ once: true }}
           >
@@ -45,8 +45,8 @@ function SkillProgressBar() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ y: 50 }}
-            whileInView={{ y: 0 }}
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
             viewport={{ once: true }}
           >
@@ -59,10 +59,10 @@ function SkillProgressBar() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ y: 50 }}
-            whileInView={{ y: 0 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            viewport={{ once: true }}
+             initial={{ y: 50, opacity: 0 }}
+             whileInView={{ y: 0, opacity: 1 }}
+             transition={{ delay: 0.5, duration: 0.5 }}
+             viewport={{ once: true }}
           >
             <div className="flex justify-between my-2">
               <p>Tailwind CSS</p>
@@ -73,8 +73,8 @@ function SkillProgressBar() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ y: 50 }}
-            whileInView={{ y: 0 }}
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.5, duration: 0.5 }}
             viewport={{ once: true }}
           >
@@ -87,10 +87,10 @@ function SkillProgressBar() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ y: 50 }}
-            whileInView={{ y: 0 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
-            viewport={{ once: true }}
+             initial={{ y: 50, opacity: 0 }}
+             whileInView={{ y: 0, opacity: 1 }}
+             transition={{ delay: 0.5, duration: 0.5 }}
+             viewport={{ once: true }}
           >
             <div className="flex justify-between my-2">
               <p>Mongo DB</p>
@@ -104,8 +104,8 @@ function SkillProgressBar() {
       </div>
       <motion.button
         className=" shadow-2xl w-44  mr-8 bg-transparent border-2 border-skin-color  text-textColor-color hover:bg-hover-color hover:text-white my-16 p-2 hover:ease"
-        initial={{ y: 50 }}
-        whileInView={{ y: 0 }}
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
         viewport={{ once: true }}
       >

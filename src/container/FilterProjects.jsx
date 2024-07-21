@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { GoProjectSymlink } from "react-icons/go";
+import { motion } from "framer-motion";
 
 const FilterableDivs = () => {
   const [filter, setFilter] = useState("all");
@@ -28,7 +29,13 @@ const FilterableDivs = () => {
   }, [filter]);
 
   return (
-    <div className="p-4 flex flex-col justify-center items-center ">
+    <motion.div
+      className="p-4 flex flex-col justify-center items-center "
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ delay: 0.5, duration: 0.5 }}
+      viewport={{ once: true }}
+    >
       <div className="flex md:space-x-2 mb-4 flex-wrap md:flex-nowrap justify-center w-80 md:w-ful">
         <button
           className={` ${
@@ -145,7 +152,7 @@ const FilterableDivs = () => {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
