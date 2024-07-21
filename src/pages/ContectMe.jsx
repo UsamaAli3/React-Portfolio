@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 function ContectMe() {
   return (
     <>
-      <section className="flex flex-col md:flex-row px-8 md:px-24 bg-skin-color gap-x-28 text-textColor-color size-full md:text-start  pt-[4rem] ">
+      <section className="flex flex-col md:flex-row px-8 md:px-24 bg-skin-color gap-x-28 text-textColor-color size-full md:text-start pt-[4rem]">
         <motion.div
           className="grow "
           initial={{ y: 50, opacity: 0 }}
@@ -26,11 +26,13 @@ function ContectMe() {
             as much info, as possible so we can get the most out of our first
             catch-up.
           </p>
+          
           <h3 className="text-[21px] mb-2">Living In:</h3>
           <p className=" mb-4 text-[18px]">Lahore, Pakistan.</p>
           <h3 className="text-[21px] mb-2">Call:</h3>
           <p className=" mb-4 text-[18px]">(+92) 318 7411532</p>
-          <div className="w-52 md:mt-12 m-auto p-auto md:m-0 md-p-0 ">
+          <div className="w-52 md:mt-12 md:m-0 md-p-0 ">
+
             <ul className="flex gap-5 text-2xl">
               <li className="hover:text-blue-400 hover:scale-110">
                 <div className="tooltip" data-tip="Facebook">
