@@ -16,7 +16,7 @@ export default function ProfileInterestedSec() {
               Interested in working with me?
             </motion.h1>
             <motion.button
-              className=" shadow-2xl w-44  mr-8 bg-skin-color border-2 border-skin-color  text-textColor-color  text-white my-16 p-2 "
+              className=" shadow-2xl w-44  md:mr-8 bg-skin-color border-2 border-skin-color  text-textColor-color  text-white my-16 p-2 "
               initial={{ y: 50, opacity: 0, scale: 1.5 }}
               whileInView={{ y: 0, opacity: 1, scale: 1 }}
               transition={{

@@ -103,7 +103,7 @@ function SkillProgressBar() {
         </div>
       </div>
       <motion.button
-        className=" shadow-2xl w-44  mr-8 bg-transparent border-2 border-skin-color  text-textColor-color hover:bg-hover-color hover:text-white my-16 p-2 hover:ease"
+        className=" shadow-2xl w-44  md:mr-8 bg-transparent border-2 border-skin-color  text-textColor-color hover:bg-hover-color hover:text-white my-16 p-2 hover:ease"
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
