@@ -64,7 +64,7 @@ function ClientSpeak() {
                 to its success. Thank you for consistently delivering
                 high-quality work!
               </p>
-              <div className="shadow-2xl  w-16 h-16 m-auto p-auto rounded-full  bg-no-repeat bg-cover bg-center bg-['url(./images/abdul-mateen.jpg')] "></div>
+              <div className="shadow-2xl  w-16 h-16 m-auto p-auto rounded-full  bg-no-repeat bg-cover bg-center bg-[url('./images/abdul-mateen.jpg')] "></div>
               <p className="text-4 font-semibold mt-4 ">Abdul Mateen</p>
               <p className="text-4  "> Freelance from Pakistan</p>
             </div>
