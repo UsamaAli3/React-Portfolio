@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { resume } from "../assets/filles/resume.pdf";
 
 function SkillProgressBar() {
   return (
@@ -59,10 +60,10 @@ function SkillProgressBar() {
             </div>
           </motion.div>
           <motion.div
-             initial={{ y: 50, opacity: 0 }}
-             whileInView={{ y: 0, opacity: 1 }}
-             transition={{ delay: 0.5, duration: 0.5 }}
-             viewport={{ once: true }}
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            viewport={{ once: true }}
           >
             <div className="flex justify-between my-2">
               <p>Tailwind CSS</p>
@@ -87,10 +88,10 @@ function SkillProgressBar() {
             </div>
           </motion.div>
           <motion.div
-             initial={{ y: 50, opacity: 0 }}
-             whileInView={{ y: 0, opacity: 1 }}
-             transition={{ delay: 0.5, duration: 0.5 }}
-             viewport={{ once: true }}
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.5 }}
+            viewport={{ once: true }}
           >
             <div className="flex justify-between my-2">
               <p>Mongo DB</p>
@@ -102,6 +103,12 @@ function SkillProgressBar() {
           </motion.div>
         </div>
       </div>
+      <a
+        href={resume}
+        download="resume"
+        target="_blank"
+        rel="noopener noreferrer"
+      ></a>
       <motion.button
         className=" shadow-2xl w-44  md:mr-8 bg-transparent border-2 border-skin-color  text-textColor-color hover:bg-hover-color hover:text-white my-16 p-2 hover:ease"
         initial={{ y: 50, opacity: 0 }}
