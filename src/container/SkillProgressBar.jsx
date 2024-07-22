@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { resume } from "../assets/filles/resume.pdf";
 
 function SkillProgressBar() {
   return (
@@ -104,7 +103,7 @@ function SkillProgressBar() {
         </div>
       </div>
       <a
-        href={resume}
+        href="assets/filles/resume.pdf"
         download="resume"
         target="_blank"
         rel="noopener noreferrer"

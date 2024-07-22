@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-scroll";
 export default function ProfileInterestedSec() {
   return (
     <>
@@ -15,20 +16,22 @@ export default function ProfileInterestedSec() {
             >
               Interested in working with me?
             </motion.h1>
-            <motion.button
-              className=" shadow-2xl w-44  md:mr-8 bg-skin-color border-2 border-skin-color  text-textColor-color  text-white my-16 p-2 "
-              initial={{ y: 50, opacity: 0, scale: 1.5 }}
-              whileInView={{ y: 0, opacity: 1, scale: 1 }}
-              transition={{
-                type: "spring",
-                stiffness: 300,
-                delay: 0.4,
-                duration: 0.5,
-              }}
-              viewport={{ once: true }}
-            >
-              Hire Me
-            </motion.button>
+            <Link to="contect-me" smooth>
+              <motion.button
+                className=" shadow-2xl w-44  md:mr-8 bg-skin-color border-2 border-skin-color  text-textColor-color  text-white my-16 p-2 "
+                initial={{ y: 50, opacity: 0, scale: 1.5 }}
+                whileInView={{ y: 0, opacity: 1, scale: 1 }}
+                transition={{
+                  type: "spring",
+                  stiffness: 300,
+                  delay: 0.4,
+                  duration: 0.5,
+                }}
+                viewport={{ once: true }}
+              >
+                Hire Me
+              </motion.button>
+            </Link>
           </div>
         </div>
       </div>
