@@ -16,6 +16,7 @@ function ClientSpeak() {
   };
   return (
     <>
+  
       <motion.section className="flex flex-col  justify-center items-center bg-[#939597] h-full pt-16   px-16  ">
         <motion.p
           className="mb-2"

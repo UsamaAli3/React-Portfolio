@@ -2,11 +2,12 @@ import React from "react";
 import ProfileInterestedSec from "../container/ProfileInterestedSec";
 import FilterProjects from "../container/FilterProjects";
 import { motion } from "framer-motion";
+import ProjectComp from "../container/ProjectComp";
 
 function Profile() {
   return (
     <>
-      <section className="flex flex-col  justify-center items-center  text-textColor-color h-full pt-16 bg-[#F8F9FA]  px-16 ">
+      <section className="flex flex-col  justify-center items-center  text-textColor-color h-full pt-16 bg-[#F8F9FA]  px-16 relative">
         <motion.p
           className="mb-2"
           initial={{ y: 50, opacity: 0 }}
@@ -26,6 +27,7 @@ function Profile() {
           Some of my most recent projects
         </motion.h2>
         <FilterProjects />
+        <ProjectComp className={"bg-slate-500 absolute top-0 hidden"} />
       </section>
       <ProfileInterestedSec />
     </>
