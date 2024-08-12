@@ -70,7 +70,7 @@ function ContectMe() {
               <li className="hover:text-black hover:scale-110">
                 <div className="tooltip" data-tip="Github">
                   <a
-                    href="https://github.com/"
+                    href="https://github.com/UsamaAli3"
                     target="_blank"
                     data-tooltip-target="tooltip-default"
                   >
