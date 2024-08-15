@@ -34,9 +34,9 @@ function AboutMe() {
               viewport={{ once: true }}
             >
               <h1 className="text-3xl mb-4 ">
-                Hi, I'm 
+                Hi, I'm
                 <span className="font-bold border-b-4 border-skin-color ml-2">
-                   Usama Ali
+                  Usama Ali
                 </span>
               </h1>
               <p className="w-[90%] text-base mb-4 leading-loose pl-6 md:pl-0">
@@ -56,7 +56,7 @@ function AboutMe() {
             >
               <motion.div className="w-24 h-24 rounded-full bg-skin-color mb-4 relative m-auto p-auto ">
                 <motion.span
-                  className="absolute text-[100px] top-[-30px] right-[20px] md:top-[-55px] md:left-2  md:text-[140px]  "
+                  className="absolute inset-0 flex items-center justify-center "
                   initial={{ scale: 1.3 }}
                   whileInView={{ scale: 1 }}
                   transition={{
@@ -66,9 +66,9 @@ function AboutMe() {
                     delay: 2,
                     duration: 1,
                   }}
-                  viewport={{once:true}}
+                  viewport={{ once: true }}
                 >
-                  2
+                  <p className="text-[100px]  md:text-[140px]"> 2</p>
                 </motion.span>
               </motion.div>
               <motion.div
