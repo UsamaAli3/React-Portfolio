@@ -7,7 +7,36 @@ import {
   FaGithub,
 } from "react-icons/fa6";
 import { motion } from "framer-motion";
+import Swal from "sweetalert2";
+
 function ContectMe() {
+  const formOnSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "509aed67-2c8a-4245-94e1-5e5f6c613967");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      Swal.fire({
+        title: "Successfull!",
+        text: "You clicked the button!",
+        icon: "success",
+      });
+    }
+  };
+
   return (
     <>
       <section className="flex flex-col md:flex-row px-8 md:px-24 bg-skin-color gap-x-28 text-textColor-color size-full md:text-start pt-[4rem]">
@@ -15,7 +44,7 @@ function ContectMe() {
           className="grow "
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
           viewport={{ once: true }}
         >
           <h1 className="text-wrap md:text-nowrap text-4xl  mb-12 font-semibold">
@@ -26,13 +55,12 @@ function ContectMe() {
             as much info, as possible so we can get the most out of our first
             catch-up.
           </p>
-          
+
           <h3 className="text-[21px] mb-2">Living In:</h3>
           <p className=" mb-4 text-[18px]">Lahore, Pakistan.</p>
           <h3 className="text-[21px] mb-2">Call:</h3>
           <p className=" mb-4 text-[18px]">(+92) 318 7411532</p>
           <div className="w-52 md:mt-12 md:m-0 md-p-0 ">
-
             <ul className="flex gap-5 text-2xl">
               <li className="hover:text-blue-400 hover:scale-110">
                 <div className="tooltip" data-tip="Facebook">
@@ -86,14 +114,14 @@ function ContectMe() {
           className="grow text-textColor-color w-full pt-16 md:pt-0"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
           viewport={{ once: true }}
         >
           <h1 className=" text-4xl text-wrap md:text-nowrap  mb-12 font-semibold">
             Estimate your Project?
           </h1>
           <form
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={formOnSubmit}
             className="flex flex-col gap-y-4 text-[16px] md:w-80 text-start w-full text-nowrap"
           >
             <label htmlFor="" className="pt-2">
@@ -101,7 +129,8 @@ function ContectMe() {
             </label>
             <input
               type="text"
-              name=""
+              name="name"
+              required
               id=""
               className="bg-transparent border-b-2  border-[#ced4da] outline-none"
             />
@@ -109,14 +138,16 @@ function ContectMe() {
             <label htmlFor="">Your Email Address:</label>
             <input
               type="email"
-              name=""
+              name="email"
+              required
               id=""
               className="bg-transparent border-b-2  border-[#ced4da] outline-none"
             />
             <label htmlFor="">How can I Help you?:</label>
             <textarea
               type="text"
-              name=""
+              name="text"
+              required
               id=""
               className="bg-transparent border-b-2  border-[#ced4da] outline-none h-48 mb-2"
             />
@@ -128,15 +159,6 @@ function ContectMe() {
               <FaArrowRight />
             </button>
           </form>
-          {/* <motion.div
-            className="flex md:justify-start justify-center"
-            initial={{ y: 90, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            
-          </motion.div> */}
         </motion.div>
       </section>
     </>

@@ -9,7 +9,7 @@ function AboutMe() {
           className="mb-2"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ delay: 0, duration: 0.8 }}
           viewport={{ once: true }}
         >
           <span className="bg-skin-color text-base px-2 text-textColor-color">
@@ -20,7 +20,7 @@ function AboutMe() {
           className="text-3xl mb-14 font-semibold"
           initial={{ y: 50, opacity: 0.5 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
           viewport={{ once: true }}
         >
           Know Me More
@@ -30,7 +30,7 @@ function AboutMe() {
             <motion.div
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.5 }}
+              transition={{ delay: 0, duration: 0.8 }}
               viewport={{ once: true }}
             >
               <h1 className="text-3xl mb-4 ">
@@ -51,19 +51,19 @@ function AboutMe() {
               className="grow my-8"
               initial={{ y: 50, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: 1, duration: 0.5 }}
+              transition={{ delay: 0, duration: 0.8 }}
               viewport={{ once: true }}
             >
               <motion.div className="w-24 h-24 rounded-full bg-skin-color mb-4 relative m-auto p-auto ">
                 <motion.span
                   className="absolute inset-0 flex items-center justify-center "
-                  initial={{ scale: 1.3 }}
+                  initial={{ scale: 1.5 }}
                   whileInView={{ scale: 1 }}
                   transition={{
                     type: "spring",
                     stiffness: 300,
 
-                    delay: 2,
+                    delay: 0.4,
                     duration: 1,
                   }}
                   viewport={{ once: true }}
@@ -74,11 +74,12 @@ function AboutMe() {
               <motion.div
                 className="text-2xl text-nowrap"
                 initial={{ scale: 0.8 }}
+                
                 whileInView={{ scale: 1 }}
                 transition={{
                   type: "spring",
                   stiffness: 300,
-                  delay: 2.5,
+                  delay: 0.8,
                   duration: 2.5,
                 }}
                 viewport={{ once: true }}
@@ -92,7 +93,7 @@ function AboutMe() {
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0, duration: 0.5 }}
+            transition={{ delay: 0, duration: 0.8 }}
             viewport={{ once: true }}
           >
             <h6 className="text-[#8E9A9D]">Name:</h6>
@@ -112,7 +113,7 @@ function AboutMe() {
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.5 }}
+            transition={{ delay: 0, duration: 0.8 }}
             viewport={{ once: true }}
           >
             <h6 className="text-[#8E9A9D]">Date of Birth:</h6>
@@ -123,7 +124,7 @@ function AboutMe() {
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.7, duration: 0.5 }}
+            transition={{ delay: 0, duration: 0.8 }}
             viewport={{ once: true }}
           >
             <h6 className="text-[#8E9A9D]">From:</h6>

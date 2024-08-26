@@ -13,103 +13,111 @@ function Menu({ className, handel }) {
     <>
       <div className={`absolute top-0 left-0  ${className} `}>
         <ul className="flex flex-col w-[100%] h-[100vh] leading-relaxed text-2xl text-white bg-black fixed z-20 justify-center items-center bg-opacity-90">
-          <li className="text-hover-color focus:text-hover-color hover:text-hover-color cursor-pointer">
-            <Link
-              to="home"
-              spy={true}
-              smooth={true}
-              duration={500}
-              activeClass="text-hover-color"
-              onClick={handel}
-            >
-              {" "}
-              Home
-            </Link>
-          </li>
-          <li className="focus:text-textColor-color">
-            <Link
-              to="about-me"
-              spy={true}
-              smooth={true}
-              activeClass="text-hover-color"
-              duration={500}
-              onClick={handel}
-              className=" focus:text-hover-color hover:text-hover-color cursor-pointer"
-            >
-              {" "}
-              About Me
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="what-i-do"
-              spy={true}
-              smooth={true}
-              duration={500}
-              onClick={handel}
-              activeClass="text-hover-color"
-              className="cursor-pointer hover:text-hover-color"
-            >
-              {" "}
-              What I Do
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="resume"
-              spy={true}
-              smooth={true}
-              duration={500}
-              onClick={handel}
-              activeClass="text-hover-color"
-              className="cursor-pointer hover:text-hover-color"
-            >
-              {" "}
-              Resume
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="profile"
-              activeClass="text-hover-color"
-              spy={true}
-              smooth={true}
-              duration={500}
-              onClick={handel}
-              className="cursor-pointer hover:text-hover-color"
-            >
-              {" "}
-              Portfolio
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="client-speak"
-              activeClass="text-hover-color"
-              spy={true}
-              smooth={true}
-              duration={500}
-              onClick={handel}
-              className="cursor-pointer hover:text-hover-color"
-            >
-              {" "}
-              Client Speak
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="contect-me"
-              activeClass="text-hover-color"
-              spy={true}
-              smooth={true}
-              duration={500}
-              onClick={handel}
-              className="cursor-pointer hover:text-hover-color"
-            >
-              {" "}
-              Contect Me
-            </Link>
-          </li>
+          <motion.div
+            className="flex  flex-col items-center"
+            initial={{ y: -50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0, duration: 0.3 }}
+            viewport={{ once: true }}
+          >
+            <li className="text-hover-color focus:text-hover-color hover:text-hover-color cursor-pointer">
+              <Link
+                to="home"
+                spy={true}
+                smooth={true}
+                duration={500}
+                activeClass="text-hover-color"
+                onClick={handel}
+              >
+                {" "}
+                Home
+              </Link>
+            </li>
+            <li className="focus:text-textColor-color">
+              <Link
+                to="about-me"
+                spy={true}
+                smooth={true}
+                activeClass="text-hover-color"
+                duration={500}
+                onClick={handel}
+                className=" focus:text-hover-color hover:text-hover-color cursor-pointer"
+              >
+                {" "}
+                About Me
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="what-i-do"
+                spy={true}
+                smooth={true}
+                duration={500}
+                onClick={handel}
+                activeClass="text-hover-color"
+                className="cursor-pointer hover:text-hover-color"
+              >
+                {" "}
+                What I Do
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="resume"
+                spy={true}
+                smooth={true}
+                duration={500}
+                onClick={handel}
+                activeClass="text-hover-color"
+                className="cursor-pointer hover:text-hover-color"
+              >
+                {" "}
+                Resume
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="profile"
+                activeClass="text-hover-color"
+                spy={true}
+                smooth={true}
+                duration={500}
+                onClick={handel}
+                className="cursor-pointer hover:text-hover-color"
+              >
+                {" "}
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="client-speak"
+                activeClass="text-hover-color"
+                spy={true}
+                smooth={true}
+                duration={500}
+                onClick={handel}
+                className="cursor-pointer hover:text-hover-color"
+              >
+                {" "}
+                Client Speak
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="contect-me"
+                activeClass="text-hover-color"
+                spy={true}
+                smooth={true}
+                duration={500}
+                onClick={handel}
+                className="cursor-pointer hover:text-hover-color"
+              >
+                {" "}
+                Contect Me
+              </Link>
+            </li>
+          </motion.div>
           <div>
             <ul className="flex gap-5 mt-10 font-semibold">
               <motion.li

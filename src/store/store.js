@@ -10,6 +10,5 @@ const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(localStorageMiddleware),
 });
-console.log(store.getState().color);
 
 export default store;

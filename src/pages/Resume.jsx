@@ -10,7 +10,7 @@ function Resume() {
           className="mb-2"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ delay: 0, duration: 0.8 }}
           viewport={{ once: true }}
         >
           <span className="bg-skin-color text-base px-2">Resume</span>
@@ -19,7 +19,7 @@ function Resume() {
           className="text-3xl mb-14 font-semibold text-center"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
           viewport={{ once: true }}
         >
           A summary of My Resume
@@ -29,7 +29,7 @@ function Resume() {
             className=" grow flex-col md:mx-10 md:flex text-start md:text-start "
             initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
           viewport={{ once: true }}
           >
             {/* Education Section */}
@@ -71,7 +71,7 @@ function Resume() {
             className=" grow flex-col md:mx-10 md:flex text-start md:text-start pt-16 md:pt-0 "
             initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          transition={{ delay: 0.4, duration: 0.8 }}
           viewport={{ once: true }}
           >
             <h1 className="text-[28px] mb-4 font-semibold">My Experiance</h1>

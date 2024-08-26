@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 import { IoMdArrowRoundDown, IoMdSettings } from "react-icons/io";
 import Typewriter from "typewriter-effect";
@@ -7,21 +7,18 @@ import { motion } from "framer-motion";
 import { FaArrowUp } from "react-icons/fa";
 import ColorSetting from "../container/ColorSetting";
 
-
 function Home() {
-  const [isActive, setIsActive] = useState(false);
   const [isArrow, setIsArrow] = useState(0);
 
-  const handleToggle = () => {
-    setIsActive(!isActive);
-  };
+  const ref = useRef(null);
+
   const textColorClass = isArrow >= 250 ? " block" : "hidden";
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setIsArrow(window.scrollY);
     });
   });
- 
+
   return (
     <>
       <div className="w-full md:h-lvh  bg-skin-color">
@@ -75,7 +72,9 @@ function Home() {
             viewport={{ once: true }}
             transition={{ delay: 0.5, duration: 0.5 }}
           >
-            <div className={` shadow-2xl size-full md:w-[20rem] md:h-[20rem] border-[17px]  relative md:absolute  z-10 rounded-full border-white bg-no-repeat bg-cover bg-center bg-[url('https://github.com/UsamaAli3/React-Portfolio/blob/main/public/images/profile.png?raw=true')]`} ></div>
+            <div
+              className={` shadow-2xl size-full md:w-[20rem] md:h-[20rem] border-[17px]  relative md:absolute  z-10 rounded-full border-white bg-no-repeat bg-cover bg-center bg-[url('https://github.com/UsamaAli3/React-Portfolio/blob/main/public/images/profile.png?raw=true')]`}
+            ></div>
           </motion.div>
         </div>
         <Link
@@ -91,19 +90,11 @@ function Home() {
         {/*Color Switcher*/}
 
         <motion.div className="flex justify-end fixed top-[40vh] right-0 z-10 ">
-          <button
-            to=""
-            className="bg-gray-700 flex justify-center items-center rounded-l-lg h-8 w-8"
-            onClick={handleToggle}
-          >
-            <IoMdSettings className="text-white text-xl" />
-          </button>
-          <motion.div
-          >
-            <ColorSetting className={` ${isActive ? "block " : "hidden "} `} />
+          <motion.div>
+            <ColorSetting />
           </motion.div>
         </motion.div>
-        
+
         <div
           className={`tooltip tooltip-left  rounded-l-lg h-8 w-8 fixed bottom-2 right-2 z-10 cursor-pointer ${textColorClass}`}
           data-tip="Back to Top"

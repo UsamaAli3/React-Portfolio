@@ -11,10 +11,8 @@ import ContectMe from "./pages/ContectMe";
 import Footer from "./pages/Footer";
 import { useSelector } from "react-redux";
 
-
 function App() {
   const color = useSelector((state) => state.color.color);
-  console.log(color);
 
   return (
     <>
