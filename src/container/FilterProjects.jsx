@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { GoProjectSymlink } from "react-icons/go";
 import { motion } from "framer-motion";
 
-const FilterableDivs = () => {
+const FilterableDivs = ({ onClick }) => {
   const [filter, setFilter] = useState("all");
-
+ 
   const handleFilterClick = (category) => {
     setFilter(category);
   };
@@ -24,7 +24,7 @@ const FilterableDivs = () => {
   };
 
   // Execute filterSelection whenever filter changes
-  React.useEffect(() => {
+  useEffect(() => {
     filterSelection(filter);
   }, [filter]);
 
@@ -39,40 +39,40 @@ const FilterableDivs = () => {
       <div className="flex md:space-x-2 mb-4 flex-wrap md:flex-nowrap justify-center w-80 md:w-ful">
         <button
           className={` ${
-            filter === "all" ? "active" : ""
-          } hover:bg-[#F8F9FA] text-gray-400 px-4 py-2 bg-[#F8F9FA] hover:text-skin-color rounded-none focus:border-skin-color focus:border-b-2 shadow-none font-semibold ease-in-out `}
+            filter === "all" ? "border-skin-color border-b-2 active" : ""
+          } hover:bg-[#F8F9FA] text-gray-400 px-4 py-2 bg-[#F8F9FA] hover:text-skin-color rounded-none  shadow-none font-semibold ease-in-out  `}
           onClick={() => handleFilterClick("all")}
         >
           All
         </button>
         <button
           className={`${
-            filter === "cars" ? "active" : ""
-          } text-gray-400 px-4 py-2 bg-[#F8F9FA] hover:text-skin-color rounded-none focus:border-skin-color focus:border-b-2 shadow-none font-semibold ease-in-out `}
+            filter === "cars" ? "border-skin-color border-b-2 active" : ""
+          } text-gray-400 px-4 py-2 bg-[#F8F9FA] hover:text-skin-color rounded-none   shadow-none font-semibold ease-in-out `}
           onClick={() => handleFilterClick("cars")}
         >
           Project
         </button>
         <button
           className={` ${
-            filter === "animals" ? "active" : ""
-          } text-gray-400 px-4 py-2 bg-[#F8F9FA] hover:text-skin-color rounded-none focus:border-skin-color focus:border-b-2 shadow-none font-semibold ease-in-out `}
+            filter === "animals" ? "border-skin-color border-b-2 active" : ""
+          } text-gray-400 px-4 py-2 bg-[#F8F9FA] hover:text-skin-color rounded-none  shadow-none font-semibold ease-in-out `}
           onClick={() => handleFilterClick("animals")}
         >
           Project
         </button>
         <button
           className={` ${
-            filter === "fruits" ? "active" : ""
-          } text-gray-400 px-4 py-2 bg-[#F8F9FA] hover:text-skin-color rounded-none focus:border-skin-color focus:border-b-2 shadow-none font-semibold ease-in-out `}
+            filter === "fruits" ? "border-skin-color border-b-2 active" : ""
+          } text-gray-400 px-4 py-2 bg-[#F8F9FA] hover:text-skin-color rounded-none  shadow-none font-semibold ease-in-out `}
           onClick={() => handleFilterClick("fruits")}
         >
           Project
         </button>
         <button
           className={` ${
-            filter === "colors" ? "active" : ""
-          } text-gray-400 px-4 py-2 bg-[#F8F9FA] hover:text-skin-color rounded-none focus:border-skin-color focus:border-b-2 shadow-none font-semibold ease-in-out `}
+            filter === "colors" ? "border-skin-color border-b-2 active" : ""
+          } text-gray-400 px-4 py-2 bg-[#F8F9FA] hover:text-skin-color rounded-none  shadow-none font-semibold ease-in-out `}
           onClick={() => handleFilterClick("colors")}
         >
           Project
@@ -85,11 +85,13 @@ const FilterableDivs = () => {
             filter === "cars" || filter === "all" ? "block" : "hidden"
           } border-4 overflow-hidden relative`}
         >
-          <div className="size-72 bg-cover hover:scale-110 ease-in-out text-white  bg-[url('https://images.unsplash.com/photo-1721265250302-c02ea398a73c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMHx8fGVufDB8fHx8fA%3D%3D')]">
-            {/* <div className="hover:bg-skin-color size-full flex items-center hover:opacity-80 text-4xl font-semibold justify-center absolute top-0 text-white ">
-              <GoProjectSymlink />
-            </div> */}
-          </div>
+          <img
+            onClick={onClick}
+            data-custom-value="1"
+            className="size-[300px] object-cover hover:scale-110 "
+            src="https://images.unsplash.com/photo-1721265250302-c02ea398a73c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMHx8fGVufDB8fHx8fA%3D%3D"
+            alt=""
+          />
 
           {/* <img className="size-[300px] object-cover hover:scale-110 ease-in-out " src="" alt="" /> */}
         </div>
@@ -100,6 +102,8 @@ const FilterableDivs = () => {
           } bg-[rgba(0, 255, 0, 0.3)] overflow-hidden`}
         >
           <img
+            onClick={onClick}
+            data-custom-value="2"
             className="size-[300px] object-cover hover:scale-110 "
             src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFlc3RoZXRpY3xlbnwwfHwwfHx8MA%3D%3D"
             alt=""
@@ -111,6 +115,8 @@ const FilterableDivs = () => {
           } overflow-hidden`}
         >
           <img
+            onClick={onClick}
+            data-custom-value="3"
             className="size-[300px] object-cover hover:scale-110"
             src="https://images.unsplash.com/photo-1721205834757-c69d5def190a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2OXx8fGVufDB8fHx8fA%3D%3D"
             alt=""

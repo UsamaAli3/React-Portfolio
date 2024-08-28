@@ -18,7 +18,7 @@ function Menu({ className, handel }) {
             initial={{ y: -50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0, duration: 0.3 }}
-            viewport={{ once: true }}
+            viewport={{ once: false  }}
           >
             <li className="text-hover-color focus:text-hover-color hover:text-hover-color cursor-pointer">
               <Link
