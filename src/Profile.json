@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "image": "/images/amazon.png",
+    "ProjectDetails": "Amazon Clone",
+    "ProjectInfo": "Amazon Clone",
+    "Industry": "Art & Design",
+    "Technologies": "HTML5, CSS3, JavaScript",
+    "Client": "Not for Client",
+    "Date": "July 16, 2023",
+    "URL": "https://amazon-clone-nu-topaz.vercel.app/amazon.html",
+    "Web": "www.amazon-clone.com"
+  },
+  {
+    "id": 2,
+    "image": "/images/my-blog.png",
+    "ProjectDetails": "My Blog",
+    "ProjectInfo": "My Blog",
+    "Industry": "Art & Design",
+    "Technologies": "HTML5, CSS3, JavaScript, TailwindCSS, ReactJS, Appwrite",
+    "Client": "Not for Client",
+    "Date": "May 24, 2023",
+    "URL": "https://myownblog-appwrite.vercel.app/all-posts",
+    "Web": "www.my-blog.com"
+  },
+  {
+    "id": 3,
+    "image": "/images/chat-app.png",
+    "ProjectDetails": "This is Project 3",
+    "ProjectInfo": "this is 3",
+    "Industry": "Art & Design",
+    "Technologies": "HTML5, CSS3, JavaScript, TailwindCSS, ReactJS, Web Socket",
+    "Client": "Not for Client",
+    "Date": "August 8, 2024",
+    "URL": "https://github.com/UsamaAli3/Chat-App",
+    "Web": "www.chat-app.com"
+  }
+]

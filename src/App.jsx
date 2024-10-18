@@ -10,12 +10,14 @@ import ClientSpeak from "./pages/ClientSpeak";
 import ContectMe from "./pages/ContectMe";
 import Footer from "./pages/Footer";
 import { useSelector } from "react-redux";
+import UserSender from "./pages/UserContext";
+import { useState } from "react";
 
 function App() {
   const color = useSelector((state) => state.color.color);
-
+  const [index, setIndex] = useState(0);
   return (
-    <>
+    <UserSender.Provider value={{index, setIndex}}>
       <div
         className=" w-full selection:bg-skin-color selection:text-white"
         data-theme={color}
@@ -44,7 +46,7 @@ function App() {
         </Element>
         <Footer />
       </div>
-    </>
+      </UserSender.Provider>
   );
 }
 

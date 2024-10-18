@@ -51,7 +51,7 @@ function Navebar() {
         <Menu
           className={isActive ? "block" : "hidden "}
           handel={handleToggle}
-        />
+        /> 
       </nav>
     </>
   );

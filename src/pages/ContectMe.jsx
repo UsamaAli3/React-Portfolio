@@ -41,7 +41,7 @@ function ContectMe() {
     <>
       <section className="flex flex-col md:flex-row px-8 md:px-24 bg-skin-color gap-x-28 text-textColor-color size-full md:text-start pt-[4rem]">
         <motion.div
-          className="grow "
+          className="grow"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.8 }}
@@ -111,12 +111,13 @@ function ContectMe() {
         </motion.div>
 
         <motion.div
-          className="grow text-textColor-color w-full pt-16 md:pt-0"
+          className="grow text-textColor-color w-full pt-16 md:pt-0 text-nowrap"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
           viewport={{ once: true }}
         >
+          {/*There is a problem when we use md:text-nowrap it is effecting on ipod size screen*/}
           <h1 className=" text-4xl text-wrap md:text-nowrap  mb-12 font-semibold">
             Estimate your Project?
           </h1>

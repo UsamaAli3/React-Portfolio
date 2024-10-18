@@ -1,10 +1,12 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback, useEffect, useContext } from "react";
 import { GoProjectSymlink } from "react-icons/go";
 import { motion } from "framer-motion";
+import UserSender from "../pages/UserContext";
 
 const FilterableDivs = ({ onClick }) => {
   const [filter, setFilter] = useState("all");
- 
+  const { setIndex } = useContext(UserSender);
+
   const handleFilterClick = (category) => {
     setFilter(category);
   };
@@ -81,14 +83,14 @@ const FilterableDivs = ({ onClick }) => {
 
       <div className="grid grid-rows-2 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5  place-content-center place-items-center">
         <div
+          onClick={() => setIndex(1)}
           className={`filterDiv cars ${
             filter === "cars" || filter === "all" ? "block" : "hidden"
           } border-4 overflow-hidden relative`}
         >
           <img
             onClick={onClick}
-            data-custom-value="1"
-            className="size-[300px] object-cover hover:scale-110 "
+            className="size-[300px] object-cover hover:scale-110 project-Id"
             src="https://images.unsplash.com/photo-1721265250302-c02ea398a73c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzMHx8fGVufDB8fHx8fA%3D%3D"
             alt=""
           />
@@ -97,27 +99,27 @@ const FilterableDivs = ({ onClick }) => {
         </div>
 
         <div
+          onClick={() => setIndex(2)}
           className={`filterDiv cars ${
             filter === "cars" || filter === "all" ? "block" : "hidden"
           } bg-[rgba(0, 255, 0, 0.3)] overflow-hidden`}
         >
           <img
             onClick={onClick}
-            data-custom-value="2"
-            className="size-[300px] object-cover hover:scale-110 "
+            className="size-[300px] object-cover hover:scale-110 project-Id"
             src="https://images.unsplash.com/photo-1509114397022-ed747cca3f65?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGFlc3RoZXRpY3xlbnwwfHwwfHx8MA%3D%3D"
             alt=""
           />
         </div>
         <div
+          onClick={() => setIndex(3)}
           className={`filterDiv colors ${
             filter === "colors" || filter === "all" ? "block" : "hidden"
           } overflow-hidden`}
         >
           <img
             onClick={onClick}
-            data-custom-value="3"
-            className="size-[300px] object-cover hover:scale-110"
+            className="size-[300px] object-cover hover:scale-110 project-Id"
             src="https://images.unsplash.com/photo-1721205834757-c69d5def190a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2OXx8fGVufDB8fHx8fA%3D%3D"
             alt=""
           />

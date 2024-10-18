@@ -1,59 +1,86 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import IntroBg from "/images/intro-bg-2.jpg";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import Amazon from "/images/amazon.png"
+import { FaExternalLinkAlt, FaIndustry } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
+import Profile from "../Profile.json";
+import { useContext } from "react";
+import UserSender from "../pages/UserContext";
 
-function ProjectComp({ className }) {
+function ProjectComp() {
+  const { index, setIndex } = useContext(UserSender);
+  const [arrs, setArrs] = useState(Profile);
+  const [info, setInfo] = useState([]);
+  const [string, setString] = useState("hidden");
+
+  
+  useEffect(() => {
+    function dataHandel() {
+      arrs.map((arr) => {
+        if (arr.id === index) {
+          setInfo(arr);
+          console.log(arr.id);
+          setString("fixed");
+
+          setIndex(0);
+        }
+      });
+    }
+    dataHandel();
+  }, [setString, index]);
+
+  console.log(index);
+
   return (
-    <div className={`m-16 ${className}`}>
-      <div className="flex justify-end ">
-        <MdClose className="text-4xl mr-4 hover:cursor-pointer" />
+    <div
+      className={`m-16 bg-white border rounded-md shadow-lg  ${string} z-40 top-0 right-0 md:top-[-50px] md:right-0 md:h-[95%]`}
+    >
+      <div className="flex justify-end w-full">
+        <button onClick={() => setString("hidden")}>
+          <MdClose className="text-2xl md:text-4xl mr-2 md:mr-4 hover:cursor-pointer " />
+        </button>
       </div>
 
-      <h1 className="text-center text-4xl font-semibold mb-4">
-        Details Project 1
+      <h1 className="text-center text-2xl md:text-4xl font-semibold md:mb-4">
+        {info.ProjectDetails}
       </h1>
-      <div className="flex md:flex-row flex-col     m-auto p-auto  mb-8">
-        <div className="md:w-[60%] p-4 ">
+      <div className="flex md:flex-row flex-col m-auto p-auto mb-4 md:mb-8">
+        <div className="w-[80%] m-auto  md:w-[60%] p-2 md:p-4 ">
           <img
             className="md:max-w-full max-h-full object-cover "
-            src={IntroBg}
+            src={info.image}
             alt=""
           />
         </div>
         <div className="md:w-[40%] m-4 p-18">
           <div>
             <h3 className=" text-xl font-semibold">Project Info:</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe
-              placeat ut odit dolores molestiae deleniti nostrum ipsa quas,
-              quibusdam veritatis velit natus, voluptate laudantium ab,
-              cupiditate voluptatibus quos? Dolores, quidem!
-            </p>
+            <p>{info.ProjectInfo}</p>
           </div>
           <div className="pt-4">
-            <h3 className=" text-xl font-semibold">Project Info:</h3>
             <div className=" flex border-b-[1px] border-gray-500 py-2 place-items-center">
               <h3 className=" text-lg font-semibold mr-2">Client:</h3>
-              <p>Ruby Clinton</p>
+              <p>{info.Client}</p>
             </div>
             <div className=" flex border-b-[1px] border-gray-500 py-2 place-items-center">
               <h3 className=" text-lg font-semibold mr-2">Technologies:</h3>
-              <p>iOS, HTML5, CSS3, PHP, Java</p>
+              <p>{info.Technologies}</p>
             </div>{" "}
             <div className=" flex border-b-[1px] border-gray-500 py-2 place-items-center">
               <h3 className=" text-lg font-semibold mr-2">Industry:</h3>
-              <p>Art & Design</p>
+              <p>{info.Industry}</p>
             </div>{" "}
             <div className=" flex border-b-[1px] border-gray-500 py-2 place-items-center">
               <h3 className=" text-lg font-semibold mr-2">Date:</h3>
-              <p>July 16, 2019</p>
+              <p>{info.Date}</p>
             </div>{" "}
             <div className=" flex border-b-[1px] border-gray-500 py-2 place-items-center">
               <h3 className=" text-lg font-semibold mr-2">URL:</h3>
+              <a href={info.URL} target="_blank">
               <p className="bg-orange-400 p-2 hover:bg-orange-500 cursor-pointer flex items-center">
-                www.example.com <FaExternalLinkAlt className="ml-2" />
+                {info.Web} <FaExternalLinkAlt className="ml-2" />
               </p>
+              </a>
             </div>
           </div>
         </div>
